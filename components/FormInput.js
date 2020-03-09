@@ -3,8 +3,6 @@ import { Input } from 'react-native-elements'
 import { StyleSheet, View } from 'react-native'
 
 const FormInput = ({
-  iconName,
-  iconColor,
   returnKeyType,
   keyboardType,
   name,

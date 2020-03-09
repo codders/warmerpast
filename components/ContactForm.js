@@ -40,6 +40,7 @@ export default class ContactForm extends React.Component {
       country,
       emailAddress,
       password,
+      confirmPassword,
       username,
       photoURL
     } = this.state
@@ -52,8 +53,6 @@ export default class ContactForm extends React.Component {
           placeholder='First Name'
           autoCapitalize='none'
           onChangeText={this.handleEmailChange}
-          iconName='ios-mail'
-          iconColor='#2C384A'
         />
         <FormInput
           name='last-name'
@@ -61,8 +60,13 @@ export default class ContactForm extends React.Component {
           placeholder='Last Name'
           autoCapitalize='none'
           onChangeText={this.handleEmailChange}
-          iconName='ios-mail'
-          iconColor='#2C384A'
+        />
+        <FormInput
+          name='username'
+          value={username}
+          placeholder='Username'
+          autoCapitalize='none'
+          onChangeText={this.handleEmailChange}
         />
         <FormInput
           name='passport-number'
@@ -70,8 +74,6 @@ export default class ContactForm extends React.Component {
           placeholder='Passport Number'
           autoCapitalize='none'
           onChangeText={this.handleEmailChange}
-          iconName='ios-mail'
-          iconColor='#2C384A'
         />
         <FormInput
           name='street-address'
@@ -79,8 +81,6 @@ export default class ContactForm extends React.Component {
           placeholder='Street Address'
           autoCapitalize='none'
           onChangeText={this.handleEmailChange}
-          iconName='ios-mail'
-          iconColor='#2C384A'
         />
         <FormInput
           name='postal-code'
@@ -88,18 +88,34 @@ export default class ContactForm extends React.Component {
           placeholder='Postal Code'
           autoCapitalize='none'
           onChangeText={this.handleEmailChange}
-          iconName='ios-mail'
-          iconColor='#2C384A'
         />
-
+        <FormInput
+          name='country'
+          value={country}
+          placeholder='Country'
+          autoCapitalize='none'
+          onChangeText={this.handleEmailChange}
+        />
+        <FormInput
+          name='email-address'
+          value={emailAddress}
+          placeholder='Email Address'
+          autoCapitalize='none'
+          onChangeText={this.handleEmailChange}
+        />
         <FormInput
           name='password'
           value={password}
-          placeholder='Enter password'
+          placeholder='Change password'
           secureTextEntry
           onChangeText={this.handlePasswordChange}
-          iconName='ios-lock'
-          iconColor='#2C384A'
+        />
+        <FormInput
+          name='confirm-password'
+          value={confirmPassword}
+          placeholder='Confirm password'
+          secureTextEntry
+          onChangeText={this.handlePasswordChange}
         />
         <View style={styles.buttonContainer}>
           <FormButton
