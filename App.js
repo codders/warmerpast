@@ -18,6 +18,7 @@ import {
 
 import Header from './components/Header';
 import Colors from './components/Colors';
+import ContactForm from './components/ContactForm';
 
 const App: () => React$Node = () => {
   return (
@@ -40,6 +41,7 @@ const App: () => React$Node = () => {
                 Update your WarmerPast profile here
               </Text>
             </View>
+            <ContactForm/>
           </View>
         </ScrollView>
       </SafeAreaView>
