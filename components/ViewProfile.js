@@ -28,13 +28,19 @@ export default class ViewProfile extends React.Component {
           </ImageBackground>
         </View>
         <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>Profile</Text>
+          <Text style={styles.sectionTitle}>Address</Text>
           <Text style={styles.sectionDescription}>
-            See your WarmerPast profile here
+            Karl Marx Allee 103
+          </Text>
+          <Text style={styles.sectionDescription}>
+            10398 Berlin
+          </Text>
+          <Text style={styles.sectionDescription}>
+            Germany
           </Text>
           <Button
-            title="Edit Profile"
-            onPress={() => this.props.navigation.navigate('EditProfile')}
+            title="Update Address"
+            onPress={() => this.props.navigation.navigate('EditAddress')}
           />
         </View>
       </View>
