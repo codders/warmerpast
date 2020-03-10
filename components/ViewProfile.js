@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet,
+import { SafeAreaView,
+         ScrollView,
+         StyleSheet,
          Text,
          View,
          ImageBackground,
@@ -11,39 +13,57 @@ import Colors from './Colors'
 export default class ViewProfile extends React.Component {
   render() {
     return (
-      <View style={styles.body}>
-        <View style={styles.headerContainer}>
-          <ImageBackground
-            style={styles.headerBackgroundImage}
-            blurRadius={1}
-            source={require('./profile-background.jpg')}
-          >
-            <View style={styles.headerColumn}>
-              <Image
-                style={styles.userImage}
-                source={require('./profile-picture.jpg')}
-              />
-              <Text style={styles.userNameText}>Arthur Taylor</Text>
-            </View>
-          </ImageBackground>
-        </View>
-        <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>Address</Text>
-          <Text style={styles.sectionDescription}>
-            Karl Marx Allee 103
-          </Text>
-          <Text style={styles.sectionDescription}>
-            10398 Berlin
-          </Text>
-          <Text style={styles.sectionDescription}>
-            Germany
-          </Text>
-          <Button
-            title="Update Address"
-            onPress={() => this.props.navigation.navigate('EditAddress')}
-          />
-        </View>
-      </View>
+      <SafeAreaView style={styles.body}>
+        <ScrollView style={styles.scroll}>
+          <View style={styles.headerContainer}>
+            <ImageBackground
+              style={styles.headerBackgroundImage}
+              blurRadius={1}
+              source={require('./profile-background.jpg')}
+            >
+              <View style={styles.headerColumn}>
+                <Image
+                  style={styles.userImage}
+                  source={require('./profile-picture.jpg')}
+                />
+                <Text style={styles.userNameText}>Arthur Taylor</Text>
+              </View>
+            </ImageBackground>
+          </View>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>E-Mail</Text>
+            <Text style={styles.sectionDescription}>
+              arthur.taylor@example.com
+            </Text>
+          </View>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Address</Text>
+            <Text style={styles.sectionDescription}>
+              Karl Marx Allee 103
+            </Text>
+            <Text style={styles.sectionDescription}>
+              10398 Berlin
+            </Text>
+            <Text style={styles.sectionDescription}>
+              Germany
+            </Text>
+            <Button
+              title="Update Address"
+              onPress={() => this.props.navigation.navigate('EditAddress')}
+            />
+          </View>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Identity Document</Text>
+            <Text style={styles.sectionDescription}>
+              Passport: 1230984
+            </Text>
+            <Button
+              title="Update Identity Document"
+              onPress={() => this.props.navigation.navigate('EditIdDocument')}
+            />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }
