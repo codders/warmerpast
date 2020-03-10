@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Home from './Home';
+import ViewProfile from './ViewProfile';
 import EditProfile from './EditProfile';
 
 const Stack = createStackNavigator()
@@ -9,7 +9,7 @@ const Stack = createStackNavigator()
 function AppNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Home" component={ViewProfile} />
       <Stack.Screen name="EditProfile" component={EditProfile} />
     </Stack.Navigator>
   );
